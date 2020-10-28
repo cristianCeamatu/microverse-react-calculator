@@ -15,12 +15,11 @@ const Button = ({ name, wide, color }) => (
 );
 
 Button.defaultProps = {
-  name: null,
   color: false,
   wide: false,
 };
 Button.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   color: PropTypes.bool,
   wide: PropTypes.bool,
 };
