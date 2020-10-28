@@ -16,7 +16,7 @@ const ButtonPanel = () => {
     <div className={styles.button_panel}>
       {buttons.map((row, i) => (
         <div className={styles.button_panel_row} key={`row${buttons[i][0]}`}>
-          {row.map((name) => {
+          {row.map(name => {
             const wide = name === '0' ? true : undefined;
             const color = differentColors.includes(name) ? true : undefined;
             return <Button name={name} color={color} wide={wide} key={name} />;

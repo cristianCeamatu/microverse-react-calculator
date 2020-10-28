@@ -3,7 +3,6 @@
   src: url(../assets/fonts/digital-7.ttf);
 }
 
-
 .app,
 .display,
 .button_panel {
@@ -36,7 +35,7 @@
 
 .button {
   background-color: rgb(245, 145, 62);
-  color: 	rgb(16, 35, 62);
+  color: rgb(16, 35, 62);
   width: 25%;
   font-weight: bold;
   border: 1px solid rgba(184, 184, 184, 0.5);
