@@ -2,38 +2,25 @@ import React from 'react';
 
 import Button from './Button';
 
-const ButtonPanel = () => (
-  <div id="button-panel">
-    <div className="row">
-      <Button name="AC" />
-      <Button name="+/-" />
-      <Button name="%" />
-      <Button name="÷" />
+const ButtonPanel = () => {
+  const buttons = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'X'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
+  return (
+    <div id="button-panel">
+      {buttons.map((row, i) => (
+        <div className="row" key={`row${buttons[i][0]}`}>
+          {row.map((name) => (
+            <Button name={name} key={name} />
+          ))}
+        </div>
+      ))}
     </div>
-    <div className="row">
-      <Button name="7" />
-      <Button name="8" />
-      <Button name="9" />
-      <Button name="X" />
-    </div>
-    <div className="row">
-      <Button name="4" />
-      <Button name="5" />
-      <Button name="6" />
-      <Button name="-" />
-    </div>
-    <div className="row">
-      <Button name="1" />
-      <Button name="2" />
-      <Button name="3" />
-      <Button name="+" />
-    </div>
-    <div className="row">
-      <Button name="0" />
-      <Button name="." />
-      <Button name="=" />
-    </div>
-  </div>
-);
+  );
+};
 
 export default ButtonPanel;
