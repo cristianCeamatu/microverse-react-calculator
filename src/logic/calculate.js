@@ -42,7 +42,6 @@ const calculate = (data, buttonName) => {
 
   if (['+', 'X', '-', '÷', '='].includes(buttonName)) {
     if (total && next && operation) {
-      console.log('operation');
       const newOperation = buttonName === '=' ? '' : buttonName;
       resultData.total = operate(total, next, operation);
       resultData.operation = newOperation;
