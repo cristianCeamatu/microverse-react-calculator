@@ -1,3 +1,9 @@
+@font-face {
+  font-family: digital;
+  src: url(../assets/fonts/digital-7.ttf);
+}
+
+
 .app,
 .display,
 .button_panel {
@@ -7,4 +13,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.display {
+  font-family: digital, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(133, 134, 148);
+  height: 100px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 50px;
 }
