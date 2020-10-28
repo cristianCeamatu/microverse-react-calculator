@@ -3,27 +3,26 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.css';
 
-const Button = ({ name, differentColor }) => {
-  console.log(differentColor);
-  return (
-    <button
-      type="button"
-      className={`${styles.button}
-                  ${differentColor ? styles.button_orange : null}
-                  ${name === '0' ? styles.button_double : null}`}
-    >
-      {name}
-    </button>
-  );
-};
+const Button = ({ name, wide, color }) => (
+  <button
+    type="button"
+    className={`${styles.button}
+                  ${color ? null : styles.button_gray}
+                  ${wide ? styles.button_double : null}`}
+  >
+    {name}
+  </button>
+);
 
 Button.defaultProps = {
   name: null,
-  differentColor: false,
+  color: false,
+  wide: false,
 };
 Button.propTypes = {
   name: PropTypes.string,
-  differentColor: PropTypes.bool,
+  color: PropTypes.bool,
+  wide: PropTypes.bool,
 };
 
 export default Button;
