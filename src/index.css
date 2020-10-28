@@ -1,9 +1,6 @@
 body {
   margin: 0;
-  padding: 90px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 60px;
   font-family:
     -apple-system,
     BlinkMacSystemFont,

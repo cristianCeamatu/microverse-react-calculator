@@ -1,0 +1,50 @@
+@font-face {
+  font-family: digital;
+  src: url(../assets/fonts/digital-7.ttf);
+}
+
+.app,
+.display,
+.button_panel {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.display {
+  font-family: digital, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(133, 134, 148);
+  height: 100px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 70px;
+}
+
+.button_panel {
+  align-items: stretch;
+}
+
+.button_panel_row,
+.button {
+  height: 100px;
+}
+
+.button {
+  background-color: rgb(245, 145, 62);
+  color: rgb(16, 35, 62);
+  width: 25%;
+  font-weight: bold;
+  border: 1px solid rgba(184, 184, 184, 0.5);
+}
+
+.button_double {
+  width: 50%;
+}
+
+.button_gray {
+  background-color: rgb(224, 224, 224);
+}
