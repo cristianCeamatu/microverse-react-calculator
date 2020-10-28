@@ -1,53 +1,59 @@
 import operate from './operate';
 
-const calculate = ({ total, next, operation }, buttonName) => {
+const calculate = (data, buttonName) => {
+  const { total, next, operation } = data;
+  const resultData = data;
+
   if (buttonName === '+/-') {
     if (total && !next) {
-      return { total: total * -1, operation };
+      resultData.total = total * -1;
     }
     if (next) {
-      return { next: next * -1, total, operation };
+      resultData.next = next * -1;
     }
-    return;
   }
 
   if (buttonName === '%') {
     if (total && !next) {
-      return { total: total * 100, operation };
+      resultData.total = operate(total, 100, '%');
     }
     if (next) {
-      return { next: next * 100, total, operation };
+      resultData.next = operate(next, 100, '%');
     }
-    return;
   }
 
   if (buttonName === '.') {
     if (!total && !next) {
-      return { total: '0.', operation };
+      resultData.total = '0.';
     }
     if (total && !next && total.indexOf('.') === -1) {
-      return { total: `${total}.`, operation };
+      resultData.total = `${total}.`;
     }
     if (next && next.indexOf('.') === -1) {
-      return { next: `${next}.`, total, operation };
+      resultData.next = `${next}.`;
     }
-    return;
   }
 
   if (buttonName === 'AC') {
-    return { total: '', next: '', operation: '' };
+    resultData.total = '';
+    resultData.next = '';
+    resultData.operation = '';
   }
 
   if (['+', 'X', '-', '÷', '='].includes(buttonName)) {
     if (total && next && operation) {
-      newOperation = buttonName === '=' ? '' : buttonName;
-      return { total: operate(total, next, operation), operation: newOperation };
+      console.log('operation');
+      const newOperation = buttonName === '=' ? '' : buttonName;
+      resultData.total = operate(total, next, operation);
+      resultData.operation = newOperation;
     }
 
     if (total && !next) {
-      return { total, operation: buttonName };
+      resultData.operation = buttonName;
     }
   }
+
+  return resultData;
 };
 
 export default calculate;
