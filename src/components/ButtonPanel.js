@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from './Button';
+import styles from './styles.module.css';
 
 const ButtonPanel = () => {
   const buttons = [
@@ -11,10 +12,10 @@ const ButtonPanel = () => {
     ['0', '.', '='],
   ];
   return (
-    <div id="button-panel">
+    <div className={styles.button_panel}>
       {buttons.map((row, i) => (
         <div className="row" key={`row${buttons[i][0]}`}>
-          {row.map(name => (
+          {row.map((name) => (
             <Button name={name} key={name} />
           ))}
         </div>

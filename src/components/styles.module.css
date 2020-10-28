@@ -1,5 +1,6 @@
 .app,
-.display {
+.display,
+.button_panel {
   width: 700px;
   margin: 15px auto;
   display: flex;
