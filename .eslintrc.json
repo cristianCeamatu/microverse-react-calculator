@@ -15,6 +15,7 @@
   "extends": ["airbnb", "plugin:react/recommended"],
   "plugins": ["react"],
   "rules": {
+    "react/jsx-one-expression-per-line": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
     "no-shadow": "off",
