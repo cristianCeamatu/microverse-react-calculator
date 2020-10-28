@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './styles.module.css';
+
 const Display = ({ result }) => (
-  <div id="display">
-    <div className="row">
-      <p className="mb-0 text-right col shadow bg-light py-2 h3">{result}</p>
-    </div>
+  <div className={styles.display}>
+    <p className="mb-0 text-right w-100">{result}</p>
   </div>
 );
 
