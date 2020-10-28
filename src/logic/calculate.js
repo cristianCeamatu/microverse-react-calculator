@@ -10,6 +10,7 @@ const calculate = ({ total, next, operation }, buttonName) => {
     }
     return;
   }
+
   if (buttonName === '%') {
     if (total && !next) {
       return { total: total * 100, operation };
@@ -19,6 +20,7 @@ const calculate = ({ total, next, operation }, buttonName) => {
     }
     return;
   }
+
   if (buttonName === '.') {
     if (!total && !next) {
       return { total: '0.', operation };
@@ -31,8 +33,20 @@ const calculate = ({ total, next, operation }, buttonName) => {
     }
     return;
   }
+
   if (buttonName === 'AC') {
     return { total: '', next: '', operation: '' };
+  }
+
+  if (['+', 'X', '-', '÷', '='].includes(buttonName)) {
+    if (total && next && operation) {
+      newOperation = buttonName === '=' ? '' : buttonName;
+      return { total: operate(total, next, operation), operation: newOperation };
+    }
+
+    if (total && !next) {
+      return { total, operation: buttonName };
+    }
   }
 };
 
