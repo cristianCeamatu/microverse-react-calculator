@@ -31,7 +31,7 @@
 
 ## Prerequisities
 
-To get this project up and running locally, you must have [node](https://nodejs.org/en/)  and [yarn](https://yarnpkg.com/) installed locally.
+To get this project up and running locally, you must have [node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/) installed locally.
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ Navigate through the local folder where you want to clone the repository and run
 or with https<br>
 `https://github.com/cristianCeamatu/microverse-react-calculator/`.<br>
 **Step 2**<br>
-Run `cd js-phaser-shooter-game`<br>
+Run `cd microverse-react-calculator`<br>
 **Step 3**<br>
 Run `yarn install` to install the npm packages from the `package.json` file.<br>
 **Step 4**<br>
