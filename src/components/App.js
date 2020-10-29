@@ -12,28 +12,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      total: null,
-      next: null,
-      operation: null,
+      total: undefined,
+      next: undefined,
+      operation: undefined,
     };
   }
 
   handleClick = buttonName => {
-    console.log(buttonName);
-    this.setState(
-      (prevState, props) => {
-        console.log(prevState);
-        return calculate(prevState, buttonName);
-      },
-      () => console.log(this.state),
-    );
+    const newState = calculate(this.state, buttonName);
+    this.setState(newState);
+    console.log(this.state);
   };
 
   render() {
     const { total, next, operation } = this.state;
     return (
       <div className={styles.app}>
-        <Display total={total} next={next} />
+        <Display total={total} next={next} operation={operation} />
         <ButtonPanel data={this.state} clickHandler={this.handleClick} />
       </div>
     );

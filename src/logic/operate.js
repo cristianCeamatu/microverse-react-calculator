@@ -21,14 +21,10 @@ const operate = (numberOne, numberTwo, operation) => {
     if (operation === '-') {
       result = Big(one.minus(two));
     }
-
-    if (operation === '%') {
-      result = Big(one.div(two));
-    }
   } catch (error) {
     result = NaN;
   }
-  return result.toPrecision();
+  return result.toPrecision().toString();
 };
 
 export default operate;
