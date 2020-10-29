@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.css';
 
-const Button = ({ name, wide, color }) => (
+// prettier-ignore
+const Button = ({
+  name, wide, color, clickHandler,
+}) => (
   <button
     type="button"
     className={`${styles.button}
                   ${color ? null : styles.button_gray}
                   ${wide ? styles.button_double : null}`}
+    onClick={() => clickHandler(name)}
   >
     {name}
   </button>
@@ -20,6 +24,7 @@ Button.defaultProps = {
 };
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
   color: PropTypes.bool,
   wide: PropTypes.bool,
 };

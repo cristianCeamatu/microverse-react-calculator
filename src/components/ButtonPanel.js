@@ -1,16 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from './Button';
 import styles from './styles.module.css';
 
-const ButtonPanel = () => {
-  const buttons = [
-    ['AC', '+/-', '%', '÷'],
-    ['7', '8', '9', 'X'],
-    ['4', '5', '6', '-'],
-    ['1', '2', '3', '+'],
-    ['0', '.', '='],
-  ];
+const ButtonPanel = ({ buttons, clickHandler }) => {
   const differentColors = ['+', 'X', '-', '=', '÷'];
   return (
     <div className={styles.button_panel}>
@@ -19,12 +13,25 @@ const ButtonPanel = () => {
           {row.map(name => {
             const wide = name === '0' ? true : undefined;
             const color = differentColors.includes(name) ? true : undefined;
-            return <Button name={name} color={color} wide={wide} key={name} />;
+            return (
+              <Button
+                name={name}
+                wide={wide}
+                color={color}
+                clickHandler={buttonName => clickHandler(buttonName)}
+                key={name}
+              />
+            );
           })}
         </div>
       ))}
     </div>
   );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+  buttons: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
 };
 
 export default ButtonPanel;

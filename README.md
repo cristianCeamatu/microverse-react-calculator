@@ -2,32 +2,31 @@
 
 # React calculator.
 
-<!-- > In this project, we were required to build a space shooter game with the Phaser Javascript library.
+> In this project, we were required to build a calculator using the React.js library.
 > <br>
-> The player will have to kill different types of enemies with AI functionality. He can also pick droppings to increase his weapon level/lives or to enter in shield mode.
+> The app is mobile responsive and has keyboard support.
 > <br>
-> The game currently has 7 levels (from which one is a Boss and the last one has an infinite spawn). The player can reach a maximum of 5 extra lives and level 7 laser.
-> <br>
-> The game is tested using Jest for unit testing -->
 
-<!-- ## App functionality
+## App functionality
 
-- Users are required to choose a nickname when they visit the website
-- Users can kill enemies to increase the score and level
-- Current game levels by score: -->
+- Users can perform calculations using the mouse or keyboard.
 
 ## This web app is live, you can check it here: [Live demo](https://react-calculator-microverse.herokuapp.com/)
 
-<!-- ## Screenshots of the app.
+## Screenshot of the app.
 
 ![image](readme-assets/app-screenshot.png)
-![image](readme-assets/app-screenshot1.png) -->
 
 ## Built With
 
 - React.js
 - create-react-app
-- Bootstrap
+- Big.js
+
+## You can check other calculators that I built:
+
+- [ReactRedux - Canon Calculator clone](https://codepen.io/crisDevMM/full/ZjqKza)
+- [Javascript - Linux/Ubuntu calculator clone](https://cristianceamatu.github.io/theOdinProject-jscalculator/)
 
 ## Prerequisities
 
