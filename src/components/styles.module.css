@@ -22,6 +22,7 @@
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
+    margin-top: 30px;
 }
 
 .display {
@@ -74,6 +75,18 @@
   transition: all 0.15s ease-in;
   animation: button-click 0.15s ease-in;
   outline: none;
+}
+
+@media(max-width: 768px) {
+  .app,
+  .display,
+  .button_panel {
+    max-width: 100%;
+  }
+
+  .app {
+    margin-top: 10px;
+  }
 }
 
 @keyframes button-click {
