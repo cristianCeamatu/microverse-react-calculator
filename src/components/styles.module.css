@@ -73,7 +73,7 @@
 .button:focus {
   transition: all 0.15s ease-in;
   animation: button-click 0.15s ease-in;
-  outline: none ;
+  outline: none;
 }
 
 @keyframes button-click {
@@ -87,7 +87,7 @@
     -moz-box-shadow: inset 0 0 10px rgba(184, 184, 184, 0.8);
     -webkit-box-shadow: inset 0 0 10px rgba(184, 184, 184, 0.8);
     box-shadow: inset 0 0 10px rgba(184, 184, 184, 0.8);
-    border: 2px solid rgba(184, 184, 184, 0.5) ;
+    border: 2px solid rgba(184, 184, 184, 0.5);
   }
 
   100% {
