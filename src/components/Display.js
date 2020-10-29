@@ -3,18 +3,28 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.css';
 
-const Display = ({ result }) => (
-  <div className={styles.display}>
-    <p className="mb-0 text-right w-100">{result}</p>
-  </div>
-);
+const Display = ({ total, next }) => {
+  let result = '0';
+  if (next !== null) {
+    result = next;
+  } else if (total !== null) {
+    result = total;
+  }
+  return (
+    <div className={styles.display}>
+      <p className="mb-0 text-right w-100">{result}</p>
+    </div>
+  );
+};
 
 Display.defaultProps = {
-  result: '0',
+  total: '0',
+  next: null,
 };
 
 Display.propTypes = {
-  result: PropTypes.string,
+  total: PropTypes.string,
+  next: PropTypes.string,
 };
 
 export default Display;
