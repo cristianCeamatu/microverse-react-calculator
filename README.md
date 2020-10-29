@@ -13,7 +13,7 @@
 
 ## This web app is live, you can check it here: [Live demo](https://react-calculator-microverse.herokuapp.com/)
 
-## Screenshots of the app.
+## Screenshot of the app.
 
 ![image](readme-assets/app-screenshot.png)
 
