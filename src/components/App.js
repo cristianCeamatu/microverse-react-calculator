@@ -37,7 +37,6 @@ class App extends Component {
     if (buttonName === 'Enter') buttonName = '=';
     if (buttonName === '/') buttonName = '÷';
     if (buttonName === '*') buttonName = 'X';
-
     const validButton = buttons.some(row => row.includes(buttonName));
     if (validButton) {
       this.handleClick(buttonName);
