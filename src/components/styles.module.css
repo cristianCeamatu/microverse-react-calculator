@@ -16,12 +16,12 @@
 
 .app {
   box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .display {
@@ -62,19 +62,27 @@
 .button:focus {
   transition: all 0.15s ease-in;
   animation: button-click 0.15s ease-in;
-  outline: none !important;
+  outline: none ;
 }
 
 @keyframes button-click {
-  0%   {-moz-box-shadow:   none;
-    -webkit-box-shadow:none;
-    box-shadow:        none;}
-  50% {  -moz-box-shadow:    inset 0 0 10px rgba(184, 184, 184, 0.8);
+  0% {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  50% {
+    -moz-box-shadow: inset 0 0 10px rgba(184, 184, 184, 0.8);
     -webkit-box-shadow: inset 0 0 10px rgba(184, 184, 184, 0.8);
-    box-shadow:         inset 0 0 10px rgba(184, 184, 184, 0.8);
-    border: 2px solid rgba(184, 184, 184, 0.5) !important;}
-    100% {  -moz-box-shadow:    none;
-      -webkit-box-shadow: none;
-      box-shadow:         none;
-      border: 1px solid rgba(184, 184, 184, 0.5);}
+    box-shadow: inset 0 0 10px rgba(184, 184, 184, 0.8);
+    border: 2px solid rgba(184, 184, 184, 0.5) ;
+  }
+
+  100% {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(184, 184, 184, 0.5);
+  }
 }
