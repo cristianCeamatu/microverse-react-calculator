@@ -5,16 +5,17 @@ const calculate = (data, buttonName) => {
   const resultData = data;
 
   if (/[0-9]/.test(buttonName)) {
-    if (!total) {
+    if (!total || total === '0') {
       resultData.total = buttonName;
     }
-    if (total && !next && !operation) {
+    if (total && total !== '0' && !next && !operation) {
       resultData.total += buttonName;
+      if (buttonName === '0' && total === '0') resultData.total = total;
     }
-    if (total && !next && operation) {
+    if (total && operation && (!next || next === '0')) {
       resultData.next = buttonName;
     }
-    if (total && next && operation) {
+    if (total && next && operation && next !== '0') {
       resultData.next += buttonName;
     }
   }
