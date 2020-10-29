@@ -4,14 +4,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import styles from './styles.module.css';
 
-const ButtonPanel = ({ clickHandler }) => {
-  const buttons = [
-    ['AC', '+/-', '%', '÷'],
-    ['7', '8', '9', 'X'],
-    ['4', '5', '6', '-'],
-    ['1', '2', '3', '+'],
-    ['0', '.', '='],
-  ];
+const ButtonPanel = ({ buttons, clickHandler }) => {
   const differentColors = ['+', 'X', '-', '=', '÷'];
   return (
     <div className={styles.button_panel}>
@@ -38,6 +31,7 @@ const ButtonPanel = ({ clickHandler }) => {
 
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
+  buttons: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
 };
 
 export default ButtonPanel;

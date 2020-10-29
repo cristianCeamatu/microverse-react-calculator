@@ -6,6 +6,7 @@ import ButtonPanel from './ButtonPanel';
 
 import styles from './styles.module.css';
 import calculate from '../logic/calculate';
+import buttons from '../state/state';
 
 class App extends Component {
   constructor(props) {
@@ -18,10 +19,29 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    document.addEventListener('keydown', this.keyDownListener);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.keyDownListener);
+  }
+
   handleClick = buttonName => {
     const newState = calculate(this.state, buttonName);
     this.setState(newState);
-    console.log(this.state);
+  };
+
+  keyDownListener = e => {
+    let buttonName = e.key;
+    if (buttonName === 'Enter') buttonName = '=';
+    if (buttonName === '/') buttonName = '÷';
+    if (buttonName === '*') buttonName = 'X';
+
+    const validButton = buttons.some(row => row.includes(buttonName));
+    if (validButton) {
+      this.handleClick(buttonName);
+    }
   };
 
   render() {
@@ -29,7 +49,7 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <Display total={total} next={next} operation={operation} />
-        <ButtonPanel data={this.state} clickHandler={this.handleClick} />
+        <ButtonPanel data={this.state} buttons={buttons} clickHandler={this.handleClick} />
       </div>
     );
   }
